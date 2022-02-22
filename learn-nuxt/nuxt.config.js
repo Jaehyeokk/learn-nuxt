@@ -37,6 +37,6 @@ export default {
 
   // server-settings
   server: {
-    port: 5000,
+    port: 8080,
   }
 }
