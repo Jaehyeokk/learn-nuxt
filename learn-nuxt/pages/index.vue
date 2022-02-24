@@ -6,7 +6,7 @@
       </div>
       <div>
         <ul>
-          <li v-for="item in products" :key="item.id" class="item flex">
+          <li v-for="item in products" :key="item.id" class="item flex" @click="moveToDetailPage(item.id)">
             <img class="product-image" :src="item.imageUrl" alt="">
             <p>{{ item.name }}</p>
             <span>{{ item.price }}</span>
@@ -26,10 +26,15 @@ export default {
     const response = await axios.get('http://localhost:3000/products')
     const products = response.data.map((item) => ({
       ...item,
-      imageUrl: `${item.imageUrl}?random=${Math.random}`
+      imageUrl: `${item.imageUrl}?random=${Math.random()}`
     }))
     return { products }
-  }
+  },
+  methods: {
+    moveToDetailPage(id) {
+      this.$router.push(`detail/${id}`)
+    }
+  },
 }
 </script>
 
