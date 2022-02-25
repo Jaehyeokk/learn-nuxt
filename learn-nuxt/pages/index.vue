@@ -11,6 +11,9 @@
           </li>
         </ul>
       </div>
+      <div class="cart-wrapper">
+        <button class="btn" @click="moveToCartPage">Go to cart</button>
+      </div>
     </main>
   </div>
 </template>
@@ -47,6 +50,9 @@ export default {
         imageUrl: `${item.imageUrl}?random=${Math.random()}`
       }))
       return response
+    },
+    moveToCartPage() {
+      this.$router.push('/cart')
     }
   },
 }
