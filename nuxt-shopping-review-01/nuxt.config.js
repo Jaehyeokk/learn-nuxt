@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'learn-nuxt',
+    title: 'nuxt-shopping-review-01',
     htmlAttrs: {
       lang: 'en',
     },
@@ -15,7 +15,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/css/reset.css'],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -35,11 +35,8 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  // server-settings
+  // server
   server: {
-    port: process.env.NODE_ENV === 'production' ? null : 8080,
+    port: 8000
   },
-  env: {
-    baseURL: process.env.NODE_ENV === 'production' ? '' : 'localhost:3000'
-  }
 }

@@ -9,4 +9,6 @@
 7. [x] 상품 검색 구현
 8. [x] 카트 페이지 구현
 9. [x] 카트 페이지 구현 (API 이용)
-10. [x] nuxtServerInit, fetch cycle 이해w
+10. [x] nuxtServerInit, fetch cycle 이해
+11. [] Meta tag, OG tag 설정
+12. [] 배포 (server(SSR), static(SSG))
