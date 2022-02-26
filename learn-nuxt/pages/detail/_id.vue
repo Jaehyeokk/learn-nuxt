@@ -27,8 +27,8 @@ export default {
     return { product }
   },
   methods: {
-    addToCart() {
-      this.$store.commit('addCartItem', this.product)
+    async addToCart() {
+      await this.$store.dispatch('ADD_CART_ITEM', this.product)
       this.$router.push('/cart')
     }
   },

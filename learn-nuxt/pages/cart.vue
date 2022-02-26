@@ -18,7 +18,9 @@
 
 <script>
 export default {
-  
+  async asyncData({store}) {
+    await store.dispatch('GET_CART_ITEMS')
+  }
 }
 </script>
 

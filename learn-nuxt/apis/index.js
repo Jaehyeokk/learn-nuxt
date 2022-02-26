@@ -16,4 +16,12 @@ function getProductsByKeyword(keyword) {
   })
 }
 
-export { getProductById, getProductsByKeyword }
+function getProductsInCart() {
+  return instance.get('/carts')
+}
+
+function addCartItem(item) {
+  return instance.post('/carts', item)
+}
+
+export { getProductById, getProductsByKeyword, addCartItem, getProductsInCart }
